@@ -1,0 +1,68 @@
+﻿@model SmarTInterN.Models.Account.ViewModels.LoginModel
+
+@{
+    ViewBag.Title = "Sign in";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (TempData["errorMessage"] != null)
+{
+    <div class="messagePopup error">
+        <div class="messagePopupContent">
+            @ViewData["errorMessage"]
+        </div>
+    </div>
+}
+
+<div class="registrationForm form">
+    @using (Html.BeginForm("Login", "Account"))
+    {
+        <div class="row">
+            @Html.LabelFor(p => p.UserName, "User name:")
+            @Html.TextBoxFor(p => p.UserName)
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.UserName)
+            </span>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(p => p.Password, "Password:")
+            @Html.PasswordFor(p => p.Password)
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.Password)
+            </span>
+        </div>
+
+        <div class="row checkboxRow">
+            @Html.CheckBoxFor(p => p.KeepMeSignedIn)
+            @Html.LabelFor(p => p.KeepMeSignedIn, "Keep me signed in")
+        </div>
+
+        <div class="row buttonRow">
+            <button type="submit" class="button">
+                <span>Login</span>
+            </button>
+            @*<span>@Html.ActionLink("Forgot password?", "ForgotPassword", "Account")</span>*@
+        </div>
+
+        <div class="row descriptionRow">
+            <p>Don’t have an account?</p>
+            @Html.ActionLink("Register now", "RegisterUser", "Account")
+        </div>
+    }
+</div>
+@section footer{
+<script type="text/javascript">
+    $(function () {
+        $("body").delegate(".input-validation-error", "mouseover", function () {
+            $(this).closest("div.row").children("span.tooltip").show();
+        });
+        $("body").delegate(".input-validation-error", "mouseout", function () {
+            $(this).closest("div.row").children("span.tooltip").hide();
+        });
+    });
+    </script>
+

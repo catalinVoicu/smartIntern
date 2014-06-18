@@ -1,0 +1,89 @@
+﻿@model SmarTInterN.Models.TeamUser.ViewModels.StudentModel
+
+@{
+    ViewBag.Title = "RegisterStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="studentContainer form">
+ @using (Html.BeginForm("RegisterStudent", "Home"))
+ {
+    
+    <h2>Add team member</h2>
+    <div class="studentColumn left">
+        <div class="row">
+            @Html.LabelFor(p => p.FirstName, "First name:")
+            @Html.TextBoxFor(p => p.FirstName, new { autocomplete = "off" })
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.FirstName)
+            </span>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(p => p.LastName, "Last name:")
+            @Html.TextBoxFor(p => p.LastName, new { autocomplete = "off" })
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.LastName)
+            </span>
+        </div>
+
+            <div class="row">
+            @Html.LabelFor(p => p.Email, "Email:")
+            @Html.TextBoxFor(p => p.Email, new { autocomplete = "off" })
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.Email)
+            </span>
+        </div>
+    </div>
+  
+        <!-----Linia2------>
+    <div class="studentColumn left">
+        <div class="row">
+            @Html.LabelFor(p => p.Phone, "Phone:")
+            @Html.TextBoxFor(p => p.Phone, new { autocomplete = "off" })
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.Phone)
+            </span>
+        </div>
+
+        <div class="row">
+            @Html.LabelFor(p => p.University, "University:")
+            @Html.TextBoxFor(p => p.University, new { autocomplete = "off" })
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.LastName)
+            </span>
+        </div>
+
+            <div class="row">
+            @Html.LabelFor(p => p.UniversitySection, "University section:")
+            @Html.TextBoxFor(p => p.UniversitySection, new { autocomplete = "off" })
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row buttonRow">
+            <button type="submit" class="button">
+                <span>Submit</span>
+            </button>
+            <div class="cancelButton right">@Html.ActionLink("Cancel", "Index", "Home")</div>
+    </div>
+ }
+
+ </div>
+ @section footer{
+<script type="text/javascript">
+    $(function () {
+        $("body").delegate(".input-validation-error", "mouseover", function () {
+            $(this).closest("div.row").children("span.tooltip").show();
+        });
+        $("body").delegate(".input-validation-error", "mouseout", function () {
+            $(this).closest("div.row").children("span.tooltip").hide();
+        });
+    });
+    </script>
+}

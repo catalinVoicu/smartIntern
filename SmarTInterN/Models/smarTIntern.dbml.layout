@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 11.125" name="smarTIntern">
+  <DataContextMoniker Name="/smarTInternDataContext" />
+  <nestedChildShapes>
+    <classShape Id="01022709-99f4-4652-b7b9-c8bb39af7eaa" absoluteBounds="3.5, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/smarTInternDataContext/ApplicationTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b322baa-d23b-4d05-95db-b17e26d0f81e" absoluteBounds="3.515, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7e36389-4e83-48db-a98e-60d439af5346" absoluteBounds="3.5, 6, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/smarTInternDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9316b0d3-286b-418d-beac-666ecc101bda" absoluteBounds="3.515, 6.46, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ccf61efc-0704-4903-969d-a626a1546855" absoluteBounds="0.75, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/smarTInternDataContext/Description" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba21f7d0-1786-4c82-93c8-272e40ec019e" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b29987e-74bd-4615-8444-20e23181f7fe" absoluteBounds="6.25, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/smarTInternDataContext/Picture" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e3a098e-9430-41d9-af6e-4fe26cd1ae43" absoluteBounds="6.265, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76f01b5b-a5f2-4f1b-bb3b-e48fe5bca63a" absoluteBounds="9, 2.25, 2, 2.347801106770834">
+      <DataClassMoniker Name="/smarTInternDataContext/StudentTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d243bb06-6425-4015-859c-7dfbff58bac5" absoluteBounds="9.015, 2.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="264dc9c8-99a2-4fe1-afa8-38a15a33414d" absoluteBounds="6.25, 2.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/smarTInternDataContext/TeamTable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13fd8086-dd5b-4780-812a-da445e559903" absoluteBounds="6.265, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 3.44314697265625); (3.5 : 3.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/smarTInternDataContext/Description/Description_ApplicationTable" />
+      <nodes>
+        <classShapeMoniker Id="ccf61efc-0704-4903-969d-a626a1546855" />
+        <classShapeMoniker Id="01022709-99f4-4652-b7b9-c8bb39af7eaa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.1362939453125); (5.875 : 4.5112939453125); (5.875 : 6.53929768880208); (6.25 : 6.53929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/smarTInternDataContext/ApplicationTable/ApplicationTable_Picture" />
+      <nodes>
+        <classShapeMoniker Id="01022709-99f4-4652-b7b9-c8bb39af7eaa" />
+        <classShapeMoniker Id="2b29987e-74bd-4615-8444-20e23181f7fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.44314697265625); (9 : 3.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/smarTInternDataContext/TeamTable/TeamTable_StudentTable" />
+      <nodes>
+        <classShapeMoniker Id="264dc9c8-99a2-4fe1-afa8-38a15a33414d" />
+        <classShapeMoniker Id="76f01b5b-a5f2-4f1b-bb3b-e48fe5bca63a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.41189447265625); (6.25 : 3.41189447265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/smarTInternDataContext/ApplicationTable/ApplicationTable_TeamTable" />
+      <nodes>
+        <classShapeMoniker Id="01022709-99f4-4652-b7b9-c8bb39af7eaa" />
+        <classShapeMoniker Id="264dc9c8-99a2-4fe1-afa8-38a15a33414d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.06153746153846); (5.81607443490112 : 5.74546302663734 : JumpStart); (5.93392556509888 : 5.62761189643958 : JumpEnd); (6.0625 : 5.49903746153846); (6.0625 : 3.80534620898438); (6.25 : 3.80534620898438)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/smarTInternDataContext/aspnet_Membership/aspnet_Membership_TeamTable" />
+      <nodes>
+        <classShapeMoniker Id="e7e36389-4e83-48db-a98e-60d439af5346" />
+        <classShapeMoniker Id="264dc9c8-99a2-4fe1-afa8-38a15a33414d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

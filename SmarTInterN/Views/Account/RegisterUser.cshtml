@@ -1,0 +1,79 @@
+﻿@model SmarTInterN.Models.Account.ViewModels.RegisterUserModel
+
+@{
+    ViewBag.Title = "RegisterUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewData["errorMessage"] != null)
+{
+    <div class="messagePopup error">
+        <div class="messagePopupContent">
+            @ViewData["errorMessage"]
+        </div>
+    </div>
+}
+
+<div class="registrationForm form">
+    @using (Html.BeginForm("RegisterUser", "Account"))
+    {
+        <h4>Register</h4>
+
+        <div class="row">
+            @Html.LabelFor(p => p.UserName, "User Name:")
+            @Html.TextBoxFor(p => p.UserName)
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.UserName)
+            </span>
+        </div>
+        <div class="row">
+            @Html.LabelFor(p => p.Email, "Email:")
+            @Html.TextBoxFor(p => p.Email)
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.Email)
+            </span>
+        </div>
+        <div class="row">
+            @Html.LabelFor(p => p.Password, "Password:")
+            @Html.PasswordFor(p => p.Password)
+            <div style=" font-size:15px;"  >
+                <p>6-character minimum; case sensitive</p>
+            </div>
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.Password)
+            </span>
+        </div>
+        <div class="row">
+            @Html.LabelFor(p => p.ConfirmPassword, "Confirm Password:")
+            @Html.PasswordFor(p => p.ConfirmPassword)
+
+            <span class="tooltip">
+                @Html.ValidationMessageFor(p => p.ConfirmPassword)
+            </span>
+        </div>
+
+        
+        <div class="row buttonRow">
+            <button type="submit" class="button">
+                <span>Register</span>
+            </button>
+            <div class="cancelButton right">@Html.ActionLink("Cancel", "Index", "Home")</div>
+        </div>
+        
+    }
+</div>
+<div class="clear"></div>
+@section footer{
+<script type="text/javascript">
+    $(function () {
+        $("body").delegate(".input-validation-error", "mouseover", function () {
+            $(this).closest("div.row").children("span.tooltip").show();
+        });
+        $("body").delegate(".input-validation-error", "mouseout", function () {
+            $(this).closest("div.row").children("span.tooltip").hide();
+        });
+    });
+    </script>
+}

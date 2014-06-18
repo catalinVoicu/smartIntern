@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "ViewProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewProfile</h2>
+<div class="contactInfo">
+    <h2>Contact info</h2>
+     @{Html.RenderAction("StudentInfo", "Home");}
+</div>
+<div class="appInfo">
+<img  src="@Url.Action("GetImage", "Home")" alt="No profile image" />
+
+@Html.ActionLink("GetFile", "GetFile", "Home")
+</div>

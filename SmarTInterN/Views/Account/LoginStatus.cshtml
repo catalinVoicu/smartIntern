@@ -1,0 +1,10 @@
+﻿@model SmarTInterN.Models.Account.ViewModels.LogedInInfoModel
+
+@if (User.Identity.IsAuthenticated)
+{
+    <span style="padding:0 !important;">Welcome, @Model.UserName</span>
+}
+else
+{
+    <span></span>
+}

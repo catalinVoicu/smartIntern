@@ -1,0 +1,7 @@
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\bin\SmarTInterN.dll
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\bin\SmarTInterN.pdb
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\bin\EntityFramework.dll
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\bin\EntityFramework.xml
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\obj\Release\SmarTInterN.dll
+C:\Users\Catix\Documents\Visual Studio 2010\Projects\SmarTInterN\SmarTInterN\obj\Release\SmarTInterN.pdb

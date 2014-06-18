@@ -1,0 +1,38 @@
+﻿@model SmarTInterN.Models.Account.ViewModels.LogedInInfoModel
+
+@{
+    ViewBag.Title = "smarTIntern";
+}
+@if (TempData["registrationSuccess"] != null)
+{
+    <div class="messagePopup success">
+        <div class="messagePopupContent">
+            @TempData["registrationSuccess"]
+        </div>
+    </div>
+}
+
+@if (ViewData["errorMessage"] != null)
+{
+    <div class="messagePopup error">
+        <div class="messagePopupContent">
+            @ViewData["errorMessage"]
+        </div>
+    </div>
+}
+<div class="container_12">
+         
+    <div class="grid_5 androIos">
+        <img src="../../Content/images/AndroidiOS.png" />
+    </div> 
+ 
+    <div class="grid_5 texts">
+        <h2 >Mobile applications</h2>
+        <h2 class="prize ">Total prizes of 1800 euros</h2>
+        <h2 class="intern">The chance to work as an Intern at Telmap, an Intel Company</h2>
+        <h2 class="unique">40 unique Location Based apps competing against each other</h2>
+        <h2 class="location ">Experienced jury straight from Telmap offices</h2>
+        <h2 class="">The opportunity to develop your application with professional guidance during internship</h2>
+        <h2 style="background-image:none;">@Html.ActionLink("Click here to REGISTER now!", "RegisterUser", "Account")</h2>   
+    </div>
+</div>

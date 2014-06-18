@@ -1,0 +1,17 @@
+﻿@model SmarTInterN.Models.TeamUser.ViewModels.CounterModel
+
+<span>@Model.counter</span>
+
+@section footer{
+<script type="text/javascript">
+    var count = 
+    $.ajax({
+        type: "GET",
+        url: '/Home/Counter',
+        data: 'name',
+        success: function (data) {
+            $('#counterDisplay').html(data);
+        }
+    });
+    </script>
+}
